@@ -1,0 +1,77 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  padding: 20px;
+}
+.heroSection{
+  background-image: url('./assests/signUp.jpg');
+  height: 100%;
+  max-width: 100%;
+  
+  background-size: cover;
+}
+
+/* Navbar Styles */
+.navbar-brand {
+  font-weight: bold;
+}
+
+.nav-link {
+  font-size: 1.1rem;
+}
+
+/* Home Page Styles */
+.home-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.home-list li {
+  background: #f8f9fa;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+}
+.homeHero{
+  background-image: url('./assests/homeBanner.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  object-fit: cover;
+  height: 60vh;
+}
+/* Form Styles */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-control {
+  border-radius: 5px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar-nav {
+    text-align: center;
+  }
+  .nav-link {
+    padding: 10px 0;
+  }
+
+  .container {
+    padding: 10px;
+  }
+}
