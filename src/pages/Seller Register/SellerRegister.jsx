@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import toast, { Toaster } from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
+import Benefits from '../../components/Benefits/Benefits';
 
 const SellerSignupForm = () => {
   const [formData, setFormData] = useState({
@@ -110,7 +111,8 @@ const SellerSignupForm = () => {
   };
 
   return (
-    <div className="heroSection px-2 md:px-10 py-8">
+    <>
+        <div className="heroSection px-2 md:px-10 py-8">
       <div className="flex flex-col md:flex-row items-start w-full justify-between">
         <div className="self-start w-full  md:w-[calc(100%-20px)] md:mt-6 max-w-md mb-8 mx-auto md:mb-0">
           <h1 className="text-xl md:text-3xl text-white font-bold mb-2">Sign up as a seller!</h1>
@@ -185,6 +187,8 @@ const SellerSignupForm = () => {
         </div>
       </div>
     </div>
+    <Benefits/>
+    </>
   );
 };
 

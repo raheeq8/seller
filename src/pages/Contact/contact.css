@@ -1,0 +1,124 @@
+*,
+*:before,
+*:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.contactForm {
+    background-color: #1c4a9e;
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    height: 100vh; /* Ensure the container takes full viewport height */
+    font-size: 14px;
+    font-weight: 600;
+    color: #202035;
+    letter-spacing: 1.2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contactForm form {
+    width: auto;
+    background: #ececec;
+    box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.55),
+                10px 10px 15px rgba(70, 70, 70, 0.12);
+    padding: 40px 20px;
+    border-radius: 10px;
+}
+
+.contactForm h6 {
+    margin-bottom: 10px;
+    font: inherit;
+    text-transform: uppercase;
+}
+
+.contactForm button.submit {
+    display: block;
+    width: 80%;
+    margin-left: 10%;
+    text-align: center;
+    font: inherit;
+    color: inherit;
+    text-decoration: none;
+    border-radius: 30px;
+    padding: 10px;
+    box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.55),
+                10px 10px 15px rgba(70, 70, 70, 0.12);
+}
+
+.contactForm input[type="text"],
+.contactForm input[type="password"],
+.contactForm input[type="email"] {
+    margin-bottom: 25px;
+    border: none;
+    background-color: transparent;
+    box-shadow: inset -10px -10px 15px rgba(255, 255, 255, 0.55),
+                inset 10px 10px 15px rgba(70, 70, 70, 0.12);
+    padding: 10px;
+    width: 90%;
+    border-radius: 7px;
+    outline: none;
+}
+
+::placeholder {
+    font-size: 12px;
+    font-weight: 500;
+    color: #ababab;
+    letter-spacing: 1.3px;
+}
+
+.contactForm input[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    position: relative;
+    height: 40px;
+    width: 120px;
+    box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.55),
+                10px 10px 15px rgba(70, 70, 70, 0.12);
+    border: 5px solid #ececec;
+    margin-right: 30px;
+    border-radius: 30px;
+    font: inherit;
+    outline: none;
+    cursor: pointer;
+}
+
+.contactForm input[type="radio"]:after {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    color: #606060;
+    letter-spacing: 0.5px;
+}
+
+#developer:after {
+    content: "Developer";
+}
+
+#designer:after {
+    content: "Designer";
+}
+
+.contactForm input[type="radio"]:checked,
+.contactForm a:active {
+    box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.55),
+                10px 10px 15px rgba(70, 70, 70, 0.12),
+                inset -10px -10px 15px rgba(255, 255, 255, 0.55),
+                inset 10px 10px 15px rgba(70, 70, 70, 0.12);
+}
+
+.contactForm input[type="radio"]:checked:after {
+    color: #157fe3;
+}
