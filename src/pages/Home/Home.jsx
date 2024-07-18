@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
+import banner from "../../assests/homeBanner.jpg";
+import './home.css'
 
 const Home = () => {
   const [id, setId] = useState("");
@@ -12,24 +14,12 @@ const Home = () => {
     <div className=" p-4">
       <div className="homeHero">
         <div className="heromWrapper">
-          <div className="flex flex-col items-start pt-[7%] px-6 justify-start">
-            <h1 className="text-white font-bold text-[26px]">
-              Now you can sell on Eliph store
-            </h1>
-            <p className="text-white font-semibold">
-              Join Eliphstore and unlock the potential of your business. Reach <br />
-              millions of customers, increase your sales, and grow your brand <br />
-              with our easy-to-use platform.
-            </p>
-            <Link
-              className=" border-none rounded-[50px] px-5 py-3 mt-3 bg-white text-blue-700"
-              to={`/seller/register/${id}`}
-            >
-              <button className=" font-bold">Register Now</button>
-            </Link>
-          </div>
+          <img src={banner} alt="home banner" />
         </div>
       </div>
+      <Link to={'/seller/register/${id}'}><div className="string">
+                <h1 className="greeting en">Get Started</h1>
+              </div></Link>
       <h1 className="text-2xl font-bold my-4">Welcome to Our Website</h1>
       <p className="mb-4">
         Here's how you can become a seller on our website...
@@ -47,9 +37,9 @@ const Home = () => {
               className="font-bold text-blue-500"
               to={`/seller/register/${id}`}
             >
-              Sign-up
+              SignUp
             </Link>{" "}
-            here.
+            here
           </p>
         </div>
         <div className=" mb-5">

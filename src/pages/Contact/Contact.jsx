@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './contact.css';
 import axios from 'axios'; 
 import toast, { Toaster } from 'react-hot-toast';
@@ -10,7 +10,9 @@ const Contact = () => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [showConfetti, setShowConfetti] = useState(false);
-
+  useEffect(() =>{
+    window.scrollTo(0,0)
+  }, [])
   const handleSubmit = async (e) => {
     e.preventDefault();
 

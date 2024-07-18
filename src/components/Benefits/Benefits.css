@@ -49,3 +49,21 @@
 .benefit-text{
     text-align: center;
 }
+@media screen and (max-width: 768px) {
+    
+.benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+}
+@media screen and (max-width: 600px) {
+    
+.benefit-heading{
+    font-size: 16px;
+}
+}
+@media screen and (max-width: 500px) {
+    
+    .benefits-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    }

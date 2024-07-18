@@ -50,7 +50,7 @@ const Navbar = () => {
           }`}
           onClick={() => setActive(1)}
         >
-          <Link className="font-semibold" to={`/about`}>About</Link>
+          <Link className="font-semibold" to={`/contact`}>Contact</Link>
         </li>
       </ul>
 
@@ -60,28 +60,33 @@ const Navbar = () => {
           className="w-[28px] h-[28px] object-contain"
           onClick={() => setToggle(!toggle)}
         >
-          {toggle ? <IoClose /> : <CiMenuFries />}
+          {toggle ? <IoClose style={{fontSize: "25px"}} /> : <CiMenuFries style={{fontSize: "25px"}} />}
         </button>
 
         {/* Sidebar */}
         <div
           className={`${
             !toggle ? "hidden" : "flex"
-          } p-6 bg-black absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}
+          } p-6 bg-white absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}
         >
           <ul className="list-none flex justify-end items-start flex-1 flex-col">
-            {navLinks.map((nav, index) => (
-              <li
-                key={nav.id}
-                className={`font-poppins font-medium cursor-pointer text-[16px] ${
-                  active === nav.title ? "text-blue-700" : "text-white"
-                } ${index === navLinks.length - 1 ? "mb-0" : "mb-4"}`}
-                onClick={() => setActive(nav.title)}
-              >
-                <a href={`#${nav.id}`}>{nav.title}</a>
-              </li>
-            ))}
-          </ul>
+        <li
+          className={`font-poppins font-normal cursor-pointer text-[16px] ${
+            active === 0 ? "text-blue-700" : "text-black"
+          }`}
+          onClick={() => setActive(0)}
+        >
+          <Link className=" font-semibold" to={`/`}>Home</Link>
+        </li>
+        <li
+          className={`font-poppins font-normal cursor-pointer text-[16px] ${
+            active === 1 ? "text-blue-700" : "text-black"
+          }`}
+          onClick={() => setActive(1)}
+        >
+          <Link className="font-semibold" to={`/contact`}>Contact</Link>
+        </li>
+      </ul>
         </div>
       </div>
     </nav>
