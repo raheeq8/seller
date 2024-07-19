@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
-import banner from "../../assests/homeBanner.jpg";
+import banner from "../../assests/Banner-join us-1188X393-eliphstore (1) (1).jpg";
 import './home.css'
 
 const Home = () => {
